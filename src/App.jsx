@@ -6,7 +6,7 @@ import Main from "./components/Main";
 function App() {
   const [tasks, setTasks] = useState([
     { title: "Estudar programação", id: 1, completed: false },
-    { title: "Ler livros", id: 1, completed: false },
+    { title: "Ler livros", id: 2, completed: true },
   ]);
 
   return (
