@@ -3,7 +3,7 @@ import { RiDeleteBin5Line } from "react-icons/ri";
 import { FaEdit } from "react-icons/fa";
 import "../css/Task.css";
 
-const Task = ({ task, handleTaskClick }) => {
+const Task = ({ task, handleTaskClick, handleTaskDeletion }) => {
   return (
     <div
       className={task.completed ? "task-container completed" : "task-container"}
@@ -12,13 +12,20 @@ const Task = ({ task, handleTaskClick }) => {
         <input
           type="checkbox"
           className="checkbox-input"
-          onChange={() => handleTaskClick(task.id)}
+          onChange={() => {
+            handleTaskClick(task.id);
+          }}
           defaultChecked={task.completed ? "checked" : ""}
         />
       </div>
       <div className="task-title">{task.title}</div>
       <div className="buttons-container">
-        <button className="remove-task-button">
+        <button
+          className="remove-task-button"
+          onClick={() => {
+            handleTaskDeletion(task.id);
+          }}
+        >
           <RiDeleteBin5Line />
         </button>
         <button className="edit-task-button">

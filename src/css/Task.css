@@ -6,6 +6,7 @@
   display: grid;
   grid-template-columns: 45px calc(100% - 87px) 30px;
   gap: 4px;
+  animation: viewTask 0.4s ease-out;
 }
 
 .task-container.completed .task-title {
@@ -76,4 +77,16 @@
 
 .edit-task-button:hover {
   background-color: #585858;
+}
+
+@keyframes viewTask {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

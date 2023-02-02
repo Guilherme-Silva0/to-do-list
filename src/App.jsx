@@ -5,10 +5,7 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 
 function App() {
-  const [tasks, setTasks] = useState([
-    { title: "Estudar programação", id: 1, completed: false },
-    { title: "Ler livros", id: 2, completed: false },
-  ]);
+  const [tasks, setTasks] = useState([]);
 
   const handleTaskAddition = (taskTitle) => {
     const newTask = [
@@ -31,6 +28,12 @@ function App() {
     setTasks(newTasks);
   };
 
+  const handleTaskDeletion = (taskId) => {
+    const newTasks = tasks.filter((task) => task.id !== taskId);
+    sessionStorage.setItem("saveTasks", JSON.stringify(newTasks));
+    setTasks(newTasks);
+  };
+
   return (
     <>
       <Header />
@@ -39,6 +42,7 @@ function App() {
           tasks={tasks}
           handleTaskAddition={handleTaskAddition}
           handleTaskClick={handleTaskClick}
+          handleTaskDeletion={handleTaskDeletion}
         />
       </div>
     </>

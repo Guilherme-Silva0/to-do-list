@@ -7,7 +7,12 @@ import Tasks from "./Tasks";
 
 import "../css/Main.css";
 
-const Main = ({ tasks, handleTaskAddition, handleTaskClick }) => {
+const Main = ({
+  tasks,
+  handleTaskAddition,
+  handleTaskClick,
+  handleTaskDeletion,
+}) => {
   const handleTaskEmptyAddition = () => {
     if (tasks.length === 0) {
       return <TasksEmpty />;
@@ -20,7 +25,11 @@ const Main = ({ tasks, handleTaskAddition, handleTaskClick }) => {
         <AddTask handleTaskAddition={handleTaskAddition} />
         <TaskBoard />
         {handleTaskEmptyAddition()}
-        <Tasks tasks={tasks} handleTaskClick={handleTaskClick} />
+        <Tasks
+          tasks={tasks}
+          handleTaskClick={handleTaskClick}
+          handleTaskDeletion={handleTaskDeletion}
+        />
       </div>
     </main>
   );

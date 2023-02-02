@@ -5,7 +5,7 @@ import "../css/Header.css";
 const Header = () => {
   return (
     <header className="header-container">
-      <img src={logoInovaxBlue} alt="Logo da empresa inovas" />
+      <img src={logoInovaxBlue} alt="Logo da empresa inovax" />
       <div className="text-header-contaier">
         <h2>TO DO LIST</h2>
         <p>Teste de capacidade técnica</p>
