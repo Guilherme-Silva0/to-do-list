@@ -4,7 +4,7 @@ import Button from "./Button";
 
 import "../css/AddTask.css";
 
-const AddTask = () => {
+const AddTask = ({ handleTaskAddition }) => {
   return (
     <div className="add-task-container">
       <input

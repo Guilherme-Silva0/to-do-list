@@ -7,7 +7,7 @@ import Tasks from "./Tasks";
 
 import "../css/Main.css";
 
-const Main = ({ tasks }) => {
+const Main = ({ tasks, handleTaskAddition }) => {
   const handleTaskEmptyAddition = () => {
     if (tasks.length === 0) {
       return <TasksEmpty />;
@@ -17,7 +17,7 @@ const Main = ({ tasks }) => {
   return (
     <main>
       <div className="main-container">
-        <AddTask />
+        <AddTask handleTaskAddition={handleTaskAddition} />
         <TaskBoard />
         {handleTaskEmptyAddition()}
         <Tasks tasks={tasks} />
