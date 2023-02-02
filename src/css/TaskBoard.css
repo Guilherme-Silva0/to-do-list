@@ -1,0 +1,32 @@
+.task-board-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 0 10px 10px;
+  width: 100%;
+  font-size: 12px;
+  font-weight: 600;
+  gap: 12px;
+}
+
+.pending-tasks {
+  color: #437eb1;
+}
+
+.pending-tasks .emphasis {
+  color: #1b1d37;
+  background-color: #69c5e0;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.completed-tasks {
+  color: #038b00;
+}
+
+.completed-tasks .emphasis {
+  color: #fff;
+  background-color: #038b00;
+  padding: 2px 4px;
+  border-radius: 4px;
+}

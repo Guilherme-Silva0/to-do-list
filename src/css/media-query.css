@@ -1,12 +1,26 @@
-@media screen and (max-width: 550px) {
+@media (max-width: 550px) {
   .main-container {
-    width: 90%;
-    height: 350px;
+    width: 90% !important;
+    height: 350px !important;
+  }
+  .add-task-input {
+    width: auto;
+    flex: 2;
+  }
+  .add-task-button-container {
+    width: auto;
   }
 }
 
-@media screen and (max-width: 850px) and (min-width: 551px) {
+@media (max-width: 850px) and (min-width: 551px) {
   .main-container {
     height: 400px !important;
+  }
+  .add-task-input {
+    width: auto;
+    flex: 2;
+  }
+  .add-task-button-container {
+    width: auto;
   }
 }

@@ -1,7 +1,8 @@
 import React from "react";
 
-import TasksEmpty from "./TaskEmpty";
 import AddTask from "./AddTask";
+import TaskBoard from "./TaskBoard";
+import TasksEmpty from "./TaskEmpty";
 
 import "../css/Main.css";
 
@@ -18,6 +19,7 @@ const Main = ({ tasks }) => {
     <main>
       <div className="main-container">
         <AddTask />
+        <TaskBoard />
         <TasksEmpty />
       </div>
     </main>
