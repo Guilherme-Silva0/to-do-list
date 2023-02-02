@@ -1,25 +1,57 @@
 @media (max-width: 550px) {
+  .header-container img {
+    width: 100px;
+  }
+
+  .header-container .text-header-contaier h2 {
+    font-size: 16px;
+    font-weight: 800;
+  }
+
+  .header-container .text-header-contaier p {
+    font-size: 12px;
+    font-weight: 400;
+  }
+
   .main-container {
     width: 90% !important;
     height: 350px !important;
   }
+
   .add-task-input {
     width: auto;
     flex: 2;
   }
+
   .add-task-button-container {
     width: auto;
   }
 }
 
 @media (max-width: 850px) and (min-width: 551px) {
-  .main-container {
-    height: 400px !important;
+  .header-container img {
+    width: 110px;
   }
+
+  .header-container .text-header-contaier h2 {
+    font-size: 18px;
+    font-weight: 800;
+  }
+
+  .header-container .text-header-contaier p {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .main-container {
+    height: 350px !important;
+  }
+
   .add-task-input {
     width: auto;
     flex: 2;
   }
+
   .add-task-button-container {
     width: auto;
   }
