@@ -14,8 +14,6 @@ const Main = ({ tasks }) => {
     }
   };
 
-  console.log(tasks);
-
   return (
     <main>
       <div className="main-container">

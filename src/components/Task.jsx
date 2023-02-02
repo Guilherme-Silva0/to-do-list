@@ -1,5 +1,6 @@
 import React from "react";
-import { CgClose, CgInfo } from "react-icons/cg";
+import { RiDeleteBin5Line } from "react-icons/ri";
+import { FaEdit } from "react-icons/fa";
 import "../css/Task.css";
 
 const Task = ({ task }) => {
@@ -7,13 +8,20 @@ const Task = ({ task }) => {
     <div
       className={task.completed ? "task-container completed" : "task-container"}
     >
+      <div className="check-box-contaier">
+        <input
+          type="checkbox"
+          className="checkbox-input"
+          defaultChecked={task.completed ? "checked" : ""}
+        />
+      </div>
       <div className="task-title">{task.title}</div>
       <div className="buttons-container">
-        <button className="see-task-details-button">
-          <CgInfo />
-        </button>
         <button className="remove-task-button">
-          <CgClose />
+          <RiDeleteBin5Line />
+        </button>
+        <button className="edit-task-button">
+          <FaEdit />
         </button>
       </div>
     </div>

@@ -44,6 +44,7 @@
   }
 
   .main-container {
+    width: 75% !important;
     height: 350px !important;
   }
 

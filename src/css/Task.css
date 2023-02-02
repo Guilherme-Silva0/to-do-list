@@ -1,0 +1,79 @@
+.task-container {
+  height: 70px;
+  margin: 8px 0;
+  border-radius: 5px;
+  color: #eee;
+  display: grid;
+  grid-template-columns: 45px calc(100% - 87px) 30px;
+  gap: 4px;
+}
+
+.task-container.completed .task-title {
+  text-decoration: line-through;
+  color: #636ac7;
+}
+
+.check-box-contaier {
+  background-color: #1b1d37;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px 0 0 5px;
+}
+
+.check-box-contaier .checkbox-input {
+  width: 24px;
+  cursor: pointer;
+}
+
+.task-title {
+  background-color: #1b1d37;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.buttons-container {
+  display: grid;
+  grid-template-rows: 35px 35px;
+  gap: 2px;
+  align-items: center;
+}
+
+.remove-task-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 35px;
+  background-color: #ce0000;
+  border: none;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 0 5px 0 0;
+  transition: 0.2s;
+}
+
+.remove-task-button:hover {
+  background-color: #7e0000;
+}
+
+.edit-task-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 35px;
+  background-color: #797979;
+  border: none;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 0 0 5px 0;
+  transition: 0.2s;
+}
+
+.edit-task-button:hover {
+  background-color: #585858;
+}
