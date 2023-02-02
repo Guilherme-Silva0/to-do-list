@@ -1,0 +1,28 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 80px;
+  padding: 1.5rem;
+  color: #1b1d37;
+  box-shadow: 6px 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.header-container img {
+  width: 127px;
+}
+
+.header-container .text-header-contaier {
+  border-left: 2px solid #1b1d37;
+  padding: 0.5rem 1rem;
+}
+
+.header-container .text-header-contaier h2 {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.header-container .text-header-contaier p {
+  font-size: 16px;
+  font-weight: 400;
+}
