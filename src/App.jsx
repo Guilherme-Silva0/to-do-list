@@ -13,7 +13,7 @@ function App() {
     <>
       <Header />
       <div className="container">
-        <Main task={tasks} />
+        <Main tasks={tasks} />
       </div>
     </>
   );

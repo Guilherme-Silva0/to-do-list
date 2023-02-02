@@ -8,7 +8,7 @@ import "../css/Main.css";
 
 const Main = ({ tasks }) => {
   const handleTaskEmptyAddition = () => {
-    if (tasks) {
+    if (tasks.length == 0) {
       return <TasksEmpty />;
     }
   };
@@ -20,7 +20,7 @@ const Main = ({ tasks }) => {
       <div className="main-container">
         <AddTask />
         <TaskBoard />
-        <TasksEmpty />
+        {handleTaskEmptyAddition()}
       </div>
     </main>
   );
