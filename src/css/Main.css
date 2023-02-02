@@ -1,3 +1,4 @@
+@import "./media-query.css";
 main {
   width: 100vw;
   height: calc(100vh - 80px);
@@ -8,4 +9,5 @@ main {
 
 .main-container {
   width: 65%;
+  height: 70%;
 }
