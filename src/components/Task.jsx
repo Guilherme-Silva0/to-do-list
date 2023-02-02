@@ -3,7 +3,7 @@ import { RiDeleteBin5Line } from "react-icons/ri";
 import { FaEdit } from "react-icons/fa";
 import "../css/Task.css";
 
-const Task = ({ task }) => {
+const Task = ({ task, handleTaskClick }) => {
   return (
     <div
       className={task.completed ? "task-container completed" : "task-container"}
@@ -12,6 +12,7 @@ const Task = ({ task }) => {
         <input
           type="checkbox"
           className="checkbox-input"
+          onChange={() => handleTaskClick(task.id)}
           defaultChecked={task.completed ? "checked" : ""}
         />
       </div>

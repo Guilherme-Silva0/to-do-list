@@ -7,7 +7,7 @@ import Main from "./components/Main";
 function App() {
   const [tasks, setTasks] = useState([
     { title: "Estudar programação", id: 1, completed: false },
-    { title: "Ler livros", id: 2, completed: true },
+    { title: "Ler livros", id: 2, completed: false },
   ]);
 
   const handleTaskAddition = (taskTitle) => {
@@ -23,11 +23,23 @@ function App() {
     setTasks(newTask);
   };
 
+  const handleTaskClick = (taskId) => {
+    const newTasks = tasks.map((task) => {
+      if (task.id === taskId) return { ...task, completed: !task.completed };
+      return task;
+    });
+    setTasks(newTasks);
+  };
+
   return (
     <>
       <Header />
       <div className="container">
-        <Main tasks={tasks} handleTaskAddition={handleTaskAddition} />
+        <Main
+          tasks={tasks}
+          handleTaskAddition={handleTaskAddition}
+          handleTaskClick={handleTaskClick}
+        />
       </div>
     </>
   );
