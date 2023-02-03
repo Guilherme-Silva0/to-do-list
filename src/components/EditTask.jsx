@@ -5,10 +5,9 @@ import Button from "./Button";
 
 import "../css/EditTask.css";
 
-const EditTask = () => {
+const EditTask = ({ handleTaskUpdate }) => {
   const params = useParams();
   const navigate = useNavigate();
-  var taskId;
 
   const [inputData, setInputData] = useState("");
 
@@ -22,8 +21,8 @@ const EditTask = () => {
   }, []);
 
   const handleModTaskClick = () => {
-    sessionStorage.setItem("confirmModId", sessionStorage.getItem("taskId"));
-    sessionStorage.setItem("titleMod", inputData);
+    const taskId = sessionStorage.getItem("taskId");
+    handleTaskUpdate(inputData, taskId);
     sessionStorage.removeItem("taskId");
     navigate(-1);
   };

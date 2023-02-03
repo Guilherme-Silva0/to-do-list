@@ -20,21 +20,29 @@ const Main = ({
     }
   };
 
-  useEffect(() => {
-    const confirmModId = sessionStorage.getItem("confirmModId");
-    const titleMod = sessionStorage.getItem("titleMod");
+  // useEffect(() => {
+  //   const confirmModId = sessionStorage.getItem("confirmModId");
+  //   const titleMod = sessionStorage.getItem("titleMod");
 
-    if (
-      confirmModId != null &&
-      titleMod != null &&
-      confirmModId != undefined &&
-      titleMod != undefined &&
-      confirmModId != "" &&
-      titleMod != "null"
-    ) {
-      handleTaskUpdate(titleMod, confirmModId);
-    }
-  }, []);
+  //   if (
+  //     confirmModId !== null &&
+  //     titleMod !== null &&
+  //     confirmModId !== undefined &&
+  //     titleMod !== undefined &&
+  //     confirmModId !== "" &&
+  //     titleMod !== ""
+  //   ) {
+  //     if (
+  //       (titleMod, confirmModId) => handleTaskUpdate(titleMod, confirmModId)
+  //     ) {
+  //       sessionStorage.removeItem("confirmModId");
+  //       sessionStorage.removeItem("titleMod");
+  //     }
+  //   }
+  // }, [
+  //   sessionStorage.getItem("confirmModId"),
+  //   sessionStorage.getItem("titleMod"),
+  // ]);
 
   return (
     <>

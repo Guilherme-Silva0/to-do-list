@@ -50,9 +50,10 @@ function App() {
           title: newTaskTitle,
         };
       }
+      return task;
     });
-    sessionStorage.setItem("saveTasks", JSON.stringify(newTasks));
-    setTasks(newTasks);
+    console.log(sessionStorage.setItem("saveTasks", JSON.stringify(newTasks)));
+    return setTasks(newTasks);
   };
 
   return (
@@ -74,7 +75,11 @@ function App() {
             }
           />
 
-          <Route path="/modifying/:taskTitle" exact element={<EditTask />} />
+          <Route
+            path="/modifying/:taskTitle"
+            exact
+            element={<EditTask handleTaskUpdate={handleTaskUpdate} />}
+          />
         </Routes>
       </div>
     </BrowserRouter>
