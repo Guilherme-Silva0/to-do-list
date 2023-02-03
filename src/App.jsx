@@ -10,9 +10,8 @@ function App() {
   const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
-    const saveTasks = sessionStorage.getItem("saveTasks");
+    const saveTasks = localStorage.getItem("saveTasks");
     if (saveTasks != null) setTasks(JSON.parse(saveTasks));
-    console.log(saveTasks);
   }, []);
 
   const handleTaskAddition = (taskTitle) => {
@@ -24,7 +23,7 @@ function App() {
       },
       ...tasks,
     ];
-    sessionStorage.setItem("saveTasks", JSON.stringify(newTask));
+    localStorage.setItem("saveTasks", JSON.stringify(newTask));
     setTasks(newTask);
   };
 
@@ -38,7 +37,7 @@ function App() {
 
   const handleTaskDeletion = (taskId) => {
     const newTasks = tasks.filter((task) => task.id !== taskId);
-    sessionStorage.setItem("saveTasks", JSON.stringify(newTasks));
+    localStorage.setItem("saveTasks", JSON.stringify(newTasks));
     setTasks(newTasks);
   };
 
@@ -52,8 +51,20 @@ function App() {
       }
       return task;
     });
-    console.log(sessionStorage.setItem("saveTasks", JSON.stringify(newTasks)));
+    localStorage.setItem("saveTasks", JSON.stringify(newTasks));
     return setTasks(newTasks);
+  };
+
+  const countTasks = () => {
+    return tasks.length;
+  };
+
+  const countIncompleteTasks = () => {
+    return tasks.filter((task) => !task.completed).length;
+  };
+
+  const countCompletedTasks = () => {
+    return tasks.filter((task) => task.completed).length;
   };
 
   return (
@@ -71,6 +82,9 @@ function App() {
                 handleTaskClick={handleTaskClick}
                 handleTaskDeletion={handleTaskDeletion}
                 handleTaskUpdate={handleTaskUpdate}
+                countIncompleteTasks={countIncompleteTasks}
+                countCompletedTasks={countCompletedTasks}
+                countTasks={countTasks}
               />
             }
           />

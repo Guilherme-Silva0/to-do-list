@@ -21,6 +21,8 @@ const EditTask = ({ handleTaskUpdate }) => {
   }, []);
 
   const handleModTaskClick = () => {
+    if (inputData === "" || inputData === null || inputData === undefined)
+      return;
     const taskId = sessionStorage.getItem("taskId");
     handleTaskUpdate(inputData, taskId);
     sessionStorage.removeItem("taskId");

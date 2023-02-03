@@ -12,7 +12,9 @@ const Main = ({
   handleTaskAddition,
   handleTaskClick,
   handleTaskDeletion,
-  handleTaskUpdate,
+  countIncompleteTasks,
+  countCompletedTasks,
+  countTasks,
 }) => {
   const handleTaskEmptyAddition = () => {
     if (tasks.length === 0) {
@@ -20,36 +22,16 @@ const Main = ({
     }
   };
 
-  // useEffect(() => {
-  //   const confirmModId = sessionStorage.getItem("confirmModId");
-  //   const titleMod = sessionStorage.getItem("titleMod");
-
-  //   if (
-  //     confirmModId !== null &&
-  //     titleMod !== null &&
-  //     confirmModId !== undefined &&
-  //     titleMod !== undefined &&
-  //     confirmModId !== "" &&
-  //     titleMod !== ""
-  //   ) {
-  //     if (
-  //       (titleMod, confirmModId) => handleTaskUpdate(titleMod, confirmModId)
-  //     ) {
-  //       sessionStorage.removeItem("confirmModId");
-  //       sessionStorage.removeItem("titleMod");
-  //     }
-  //   }
-  // }, [
-  //   sessionStorage.getItem("confirmModId"),
-  //   sessionStorage.getItem("titleMod"),
-  // ]);
-
   return (
     <>
       <main>
         <div className="main-container">
           <AddTask handleTaskAddition={handleTaskAddition} />
-          <TaskBoard />
+          <TaskBoard
+            countIncompleteTasks={countIncompleteTasks}
+            countCompletedTasks={countCompletedTasks}
+            countTasks={countTasks}
+          />
           {handleTaskEmptyAddition()}
           <Tasks
             tasks={tasks}
