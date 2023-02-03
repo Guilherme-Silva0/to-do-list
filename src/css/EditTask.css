@@ -1,0 +1,34 @@
+@import "./media-query.css";
+
+.edit-container {
+  width: 100vw;
+  height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+}
+
+.edit-area-container {
+  width: 65%;
+  height: 70%;
+}
+
+.edit-task-input {
+  margin-top: 50px;
+  height: 40px;
+  width: 100%;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f2f2f2;
+  border: 1px solid #d9d9d9;
+  color: #1b1d37;
+  font-size: 16px;
+  outline: none;
+}
+
+.container-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}

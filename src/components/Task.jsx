@@ -1,9 +1,16 @@
 import React from "react";
 import { RiDeleteBin5Line } from "react-icons/ri";
 import { FaEdit } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import "../css/Task.css";
 
 const Task = ({ task, handleTaskClick, handleTaskDeletion }) => {
+  const history = useNavigate();
+  const handleTaskEditClick = () => {
+    history(`/modifying/${task.title}`);
+    sessionStorage.setItem("taskId", task.id);
+  };
+
   return (
     <div
       className={task.completed ? "task-container completed" : "task-container"}
@@ -28,7 +35,7 @@ const Task = ({ task, handleTaskClick, handleTaskDeletion }) => {
         >
           <RiDeleteBin5Line />
         </button>
-        <button className="edit-task-button">
+        <button className="edit-task-button" onClick={handleTaskEditClick}>
           <FaEdit />
         </button>
       </div>

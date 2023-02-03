@@ -13,7 +13,8 @@
     font-weight: 400;
   }
 
-  .main-container {
+  .main-container,
+  .edit-area-container {
     width: 90% !important;
     height: 350px !important;
   }
@@ -43,7 +44,8 @@
     font-weight: 400;
   }
 
-  .main-container {
+  .main-container,
+  .edit-area-container {
     width: 75% !important;
     height: 350px !important;
   }

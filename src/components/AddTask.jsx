@@ -12,7 +12,8 @@ const AddTask = ({ handleTaskAddition }) => {
   };
 
   const handleAddTaskClick = () => {
-    if (inputData == "" || inputData == null || inputData == undefined) return;
+    if (inputData === "" || inputData === null || inputData === undefined)
+      return;
     handleTaskAddition(inputData);
     setInputData("");
   };
@@ -23,6 +24,7 @@ const AddTask = ({ handleTaskAddition }) => {
         type="text"
         className="add-task-input"
         placeholder="Descreva a tarefa aqui"
+        id="input"
         onChange={handleInputChange}
         onKeyUp={(e) => {
           if (e.key === "Enter") {
