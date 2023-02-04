@@ -29,6 +29,7 @@ npm start
 - React
 - React Router
 - Session Storage
+- Location Storage 
 - UUID
 
 ## Recursos
