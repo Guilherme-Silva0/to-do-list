@@ -2,6 +2,10 @@
 
 Uma aplicação web para gerenciar suas tarefas diárias.
 
+## Aviso
+
+No momento existe uma pequena incompatibilidade com o navegador Safari
+
 ## Instalação
 
 Clone o repositório para sua máquina local:
