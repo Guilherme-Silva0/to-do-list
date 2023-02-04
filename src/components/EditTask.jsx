@@ -40,6 +40,8 @@ const EditTask = ({ handleTaskUpdate }) => {
           type="text"
           className="edit-task-input"
           id="input"
+          placeholder="Edite sua tarefa..."
+          autoFocus
           onChange={handleInputChange}
           onKeyUp={(e) => {
             if (e.key === "Enter") {

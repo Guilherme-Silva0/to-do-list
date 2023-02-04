@@ -17,6 +17,10 @@
   outline: none;
 }
 
+.add-task-input:focus {
+  border: 1px solid #1b1d37;
+}
+
 .add-task-input::placeholder {
   color: #838383;
 }
